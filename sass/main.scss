@@ -1,0 +1,108 @@
+@import "bourbon";
+@import "neat";
+
+$dark: #2A2C2B;
+$darker: #1E1E20;
+$light: #D9CB9E;
+$lighter: #F5FAFF;
+$accent: #DC3522;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, sans-serif;
+  position: relative;
+}
+
+input[type="submit"], button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: $accent;
+  color: #fff;
+}
+
+input {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+$nav-height: 80px;
+
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: $nav-height;
+  background-color: $light;
+  height: 100%;
+}
+
+nav {
+  background-color: $dark;
+  width: 100%;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  .wrap {
+    height: 100%;
+  }
+  a {
+    display: inline-block;
+    line-height: $nav-height;
+    height: 100%;
+    color: $lighter;
+    text-decoration: none;
+    padding: 0 15px;
+    @include transition(all 0.3s);
+
+    &:hover, &.active {
+      background-color: $darker;
+    }
+  }
+}
+
+header {
+  background-color: $light;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://snap-photos.s3.amazonaws.com/img-thumbs/960w/51885EE898.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: $lighter;
+  .wrap {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  }
+  h1 {
+    font-size: 4em;
+  }
+  form {
+    margin-top: 10px;
+    input[type="tel"] {
+      width: 320px;
+    }
+  }
+}
+
+p.move-down {
+  margin-top: 35px;
+}
+
+.wrap {
+	@include outer-container;
+}
+
+a {
+  color: $accent;
+}

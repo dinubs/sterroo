@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  header
+    .wrap
+      h1 Sterroo
+      p The easiest way to wake up in the morning
+      p.move-down Try it out!
+      form(id="createCall", method="POST", action="/call")
+        input(type="tel", placeholder="Your Phone Number" name="number" autocomplete="off")
+        input(type="submit" value="Create Call")
+  .wrap 
+    h1 Hello world
+    p Welcome to my site
+    form(id="createCall", method="POST", action="/call")
+      input(type="tel", placeholder="Your Phone Number" name="number")
+      input(type="submit" value="Create Call")
